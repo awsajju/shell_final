@@ -6,4 +6,4 @@ Age=$3
 
 echo "Hi $Name1 how old are you"
 
-echo "hi $Name2 I'm $Age old"
+echo "hi $Name2 I'm $Age years old"
