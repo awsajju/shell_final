@@ -1,3 +1,4 @@
 #!/bin/bash
 
-read -s -p "Eter you USERNAME : "
+read -t 5 -s -p "Eter you USERNAME : "
+
