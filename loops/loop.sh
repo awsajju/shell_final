@@ -35,7 +35,7 @@ validate (){
 for package in $@
 do
    dnf list installed $package &>>Logname
-    if [ $package -ne 0 ]; then
+    if [ $? -ne 0 ]; then
         dnf install $package -y &>>Logname
         validate $? "installing $package"
     else
