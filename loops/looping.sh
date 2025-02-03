@@ -20,7 +20,7 @@ for package in $@
 do 
     dnf list installed $package 
     if [ $? -ne 0 ]; then 
-        dnf list $package -y
+        dnf install $package -y
         validate $? "installing $package"
     else
         echo "$package is already installed"
