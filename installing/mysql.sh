@@ -19,9 +19,9 @@ if [ $? -ne 0 ]; then
     else
         echo "installing mysql..... success"
     fi
-elif
+else
     echo "already installed"
-
+fi
 
 dnf list installed git -y
 if [ $? -ne 0 ]; then
@@ -33,7 +33,7 @@ if [ $? -ne 0 ]; then
     else
         echo "installing git .... success"
     fi
-elif
+else
     echo "already installed"
 
-
+fi
