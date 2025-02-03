@@ -7,6 +7,11 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
+logfolder="/var/log/shell_script.log"
+logfile=$(echo $0 | cut -d "." -f1 )
+Timestamp=$(date +%y-%m-%d-%H-%M-%S)
+logname="$logfolder/$logfile-$Timestamp.log"
+
 if [ $USERID -ne 0 ]; then
     echo -e $R "you must have the sudo access to executre this $N"
     exit 1
@@ -21,9 +26,11 @@ validate (){
     fi
 }
 
+echo "scrpt excuting at time" &>>$logname
+
 dnf list installed python
 if [ $? -ne 0 ]; then
-    dnf install python -y
+    dnf install python -y &>>$logname
     validate $? "installing pyhton"
 else
     echo -e "$Y already installed $N"
