@@ -9,11 +9,12 @@ fi
 dnf list installed java -y
 if [ $? -ne 0 ]; then
     dnf install java -y 
-if [ $? -ne 0 ]; then
-    echo "installed java fialure"
-    exit 1
-else
-    echo "installed java successful"
+    if [ $? -ne 0 ]; then
+        echo "installed java fialure"
+        exit 1
+    else
+        echo "installed java successful"
+    fi
 else
     echo "java is already installed"
 fi
