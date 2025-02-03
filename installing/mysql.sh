@@ -1,7 +1,6 @@
 #!/bin/bash
 
-echo "Enter the package"
-read package
+
 
 USERID = $(id -u)
 
