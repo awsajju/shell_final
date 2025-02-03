@@ -2,6 +2,10 @@
 
 USERID=$(id -u)
 
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+
 if [ $USERID -ne 0 ]; then
     echo "you must have the sudo access to executre this"
     exit 1
