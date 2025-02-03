@@ -26,7 +26,7 @@ validate (){
     fi
 }
 
-echo "scrpt excuting at time" &>>$logname
+echo "scrpt excuting at $Timestamp" &>>$logname
 
 dnf list installed python
 if [ $? -ne 0 ]; then
