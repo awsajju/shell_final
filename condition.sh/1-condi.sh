@@ -2,7 +2,7 @@
 
 day=$1
 
-if ( $day == "sunday" ); then
+if ( $1 == "sunday" ); then
     echo "Today is holliday"
 else
     echo "Go to school"
