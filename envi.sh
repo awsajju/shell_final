@@ -1,7 +1,5 @@
 #!/bin/bash
 
-echo "Enter Envi variable"
+read -p "Enter the variable " var
 
-read variable
-
-echo "$variable"
+echo "Environment: ${!var}"
