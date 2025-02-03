@@ -28,7 +28,7 @@ validate (){
 
 echo "scrpt excuting at $Timestamp" &>>$logname
 
-dnf list installed python
+dnf list installed python &>>$logname
 if [ $? -ne 0 ]; then
     dnf install python -y &>>$logname
     validate $? "installing pyhton"
