@@ -2,7 +2,7 @@
 
 
 
-USERID = $(id -u)
+USERID=$(id -u)
 
 if [ $USERID -ne 0 ]; then
     echo "you must have the execute sudo access to execute this"
