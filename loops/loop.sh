@@ -32,7 +32,7 @@ validate (){
 
 
 
-for $package in $@
+for package in $@
 do
    dnf list installed $package &>>Logname
     if [ $package -ne 0 ]; then
