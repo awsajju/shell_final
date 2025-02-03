@@ -22,7 +22,7 @@ Logname=$Log_Folder/$Log_File-$Timestamp
 
 #creating function for checking the packages are installing or not
 validate (){
-    if [ $1 -ne 0 ];
+    if [ $1 -ne 0 ]; then
         echo -e "$2 ...$R failure $N"
         exit 1
     else
