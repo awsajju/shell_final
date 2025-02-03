@@ -21,7 +21,7 @@ if [ $? -ne 0 ]; then
     fi
 elif
     echo "already installed"
-fi
+
 
 dnf list installed git -y
 if [ $? -ne 0 ]; then
@@ -36,4 +36,4 @@ if [ $? -ne 0 ]; then
 elif
     echo "already installed"
 
-fi
+
