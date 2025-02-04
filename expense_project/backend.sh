@@ -74,10 +74,10 @@ validate $? "setting schema"
 
 
 systemctl daemon-reload &>>$logname
-VALIDATE $? "Daemon Reload"
+validate $? "Daemon Reload"
 
 systemctl enable backend &>>$logname
-VALIDATE $? "Enabling backend"
+validate $? "Enabling backend"
 
 systemctl restart backend &>>$logname
-VALIDATE $? "Starting Backend"
+validate $? "Starting Backend"
