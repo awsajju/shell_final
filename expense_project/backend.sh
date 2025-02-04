@@ -46,7 +46,7 @@ else
     echo "user already exists $Y skipp $N" &>>$logname
 fi
 
-mkdir -p app &>>$logname
+mkdir -p /app &>>$logname
 validate $? "creating app folder"
 
 
