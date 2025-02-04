@@ -38,10 +38,10 @@ validate $? "enable mysql"
 systemctl start mysqld &>>$logname
 validate $? "start the mysql"
 
-mysql -h mysql.myfooddy.fun -u root -pExpenseApp@1 -e 'show databases;'
+mysql -h mysql.myfooddy.fun -u root -pExpenseApp@1 -e 'show databases;' &>>$logname
 
 if [ $? -ne 0 ];then
-echo "mysql root password not setup" &>>logname
+echo "mysql root password not setup" &>>$logname
 mysql_secure_installation --set-root-pass ExpenseApp@1
 validate $? "setting root passworrd" &>>$logname
 else
