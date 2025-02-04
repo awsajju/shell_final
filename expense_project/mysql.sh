@@ -43,7 +43,7 @@ mysql -h mysql.myfooddy.fun -u root -pExpenseApp@1 -e 'show databases;'
 if [ $? -ne 0 ];then
 echo "mysql root password not setup" &>>logname
 mysql_secure_installation --set-root-pass ExpenseApp@1
-validate $? "setting root passworrd"
+validate $? "setting root passworrd" &>>$logname
 else
     echo -e "mysql root password already setup ...$Y SETUP $N"
 fi
