@@ -2,7 +2,7 @@
 USERID=$(id -u)
 check_root () {
 if [ $USERID -ne 0 ]; then
-    echo -e $R "you must have the sudo access to execute this $N"
+    echo -e  " $R you must have the sudo access to execute this $N"
     exit 1
 fi
 }
