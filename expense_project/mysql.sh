@@ -29,7 +29,7 @@ validate () {
     fi
 }
 
-dnf install mysql-serever -y &>>$logname
+dnf install mysql-server -y &>>$logname
     validate $? "installing mysql serever"
 
 systemctl enable mysqld &>>$logname
