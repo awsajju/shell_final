@@ -69,7 +69,7 @@ cp /home/ece-user/SHELL_FINAL/expense_project /etc/systemd/system/backend.servic
 dnf install mysql -y &>>$logname
 validate $? "installing mysql schema"
 
-mysql -h myfooddy.fun -uroot -pExpenseApp@1 < /schema/backend.sql &>>$logname
+mysql -h myfooddy.fun -uroot -pExpenseApp@1 < /home/ec2-user/shell_final/expense_project/schema/backend.sql &>>$logname
 validate $? "setting schema"
 
 
