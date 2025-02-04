@@ -64,7 +64,7 @@ validate $? "unziping the code"
 npm install &>>$logname
 validate $? "installing dependencies"
 
-cp /home/ece-user/SHELL_FINAL/expense_project /etc/systemd/system/backend.service &>>$logname
+cp /home/ec2-user/shell_final/expense_project /etc/systemd/system/backend.service &>>$logname
 
 dnf install mysql -y &>>$logname
 validate $? "installing mysql schema"
