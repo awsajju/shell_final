@@ -1,5 +1,11 @@
 
 USERID=$(id -u)
+
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
+ 
 check_root () {
 if [ $USERID -ne 0 ]; then
     echo -e  " $R you must have the sudo access to execute this $N"
@@ -8,11 +14,6 @@ fi
 }
 
 check_root
-
-R="\e[31m"
-G="\e[32m"
-Y="\e[33m"
-N="\e[0m"
 
 logfolder="/var/log/mysql.log"
 logfile=$(echo $0 | cut -d "." -f1 )
