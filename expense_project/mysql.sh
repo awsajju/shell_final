@@ -18,7 +18,7 @@ check_root
 logfolder="/var/log/mysql.log"
 logfile=$(echo $0 | cut -d "." -f1 )
 Timestamp=$(date +%y-%m-%d-%H-%M-%S )
-logname=$logfolder/$logfile-$Timestamp
+logname="$logfolder/$logfile-$Timestamp.log"
 
 validate () {
     if [ $1 -ne 0 ];then
