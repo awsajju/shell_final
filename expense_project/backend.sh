@@ -67,9 +67,9 @@ validate $? "installing dependencies"
 cp /home/ece-user/SHELL_FINAL/expense_project /etc/systemd/system/backend.service &>>$logname
 
 dnf install mysql -y &>>$logname
-vlaidate $? "installing mysql schema"
+validate $? "installing mysql schema"
 
-mysql -h myfooddy.fun -uroot -pExpenseApp@1 < /app/schema/backend.sql &>>$logname
+mysql -h myfooddy.fun -uroot -pExpenseApp@1 < /root/app/schema/backend.sql &>>$logname
 validate $? "setting schema"
 
 
