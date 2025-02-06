@@ -12,15 +12,12 @@ logfile=$(echo $0 | cut -d "." -f1 )
 Timestamp=$(date +%y-%m-%d-%H-%M-%S)
 logname="$logfolder/$logfile-$Timestamp.log"
 
-check_root () {
-
+check_root (){
 if [ $USERID -ne 0 ];then
     echo -e " $R You must required sudo access to execute this $N"
     exit 1
 fi
-
 }
-
 check_root
 
 validate () {
@@ -32,7 +29,7 @@ validate () {
     fi
 }
 
-dnf install msql-server -y &>>$logname
+dnf install mysql-server -y &>>$logname
 validate $? "installing mysql server"
 
 systemctl enable mysqld &>>$logname
