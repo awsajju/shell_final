@@ -39,7 +39,7 @@ validate $? "enable nodejs 20"
 dnf install nodejs -y &>>$logname
 validate $? "installing nodejs"
 
-id expense
+id expense &>>$logname
 if [ $? -ne 0 ];then
     echo "user not exists"
     useradd expense
