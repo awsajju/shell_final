@@ -16,7 +16,7 @@ fi
 }
 check_root
 
-logfolder="/var/log/mysql.log"
+logfolder="/var/log/backend.log"
 logfile=$(echo $0 | cut -d "." -f1 )
 Timestamp=$(date +%y-%m-%d-%H-%M-%S)
 logname="$logfolder/$logfile-$Timestamp.log"
