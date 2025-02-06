@@ -40,7 +40,7 @@ dnf install nodejs -y &>>$logname
 validate $? "installing nodejs"
 
 id expense &>>$logname
-if [ $? -ne 0 ];then
+if [ $? -ne 0 ];then  &>>$logname
     echo "user not exists"
     useradd expense
     validate $? "adding user"
@@ -54,8 +54,8 @@ validate $? "creating app folder"
 curl -o /tmp/backend.zip https://expense-builds.s3.us-east-1.amazonaws.com/expense-backend-v2.zip &>>$logname
 validate $? "downloading the code"
 
-cd /app &>>$logname
-validate $? "changing the app directory"
+cd /app
+rm -rf /app/*
 
 unzip /tmp/backend.zip &>>$logname
 validate $? "unzip the bakcend"
