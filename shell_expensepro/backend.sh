@@ -63,7 +63,7 @@ validate $? "unzip the bakcend"
 npm install &>>$logname
 validate $? "installing dependencies"
 
-cp /home/ec2-user/shell_final/expense_project /etc/systemd/system/backend.service &>>$logname
+cp /home/ec2-user/shell_final/shell_expensepro /etc/systemd/system/backend.service &>>$logname
 
 dnf install mysql -y &>>$logname
 validate $? "installing mysql schema"
