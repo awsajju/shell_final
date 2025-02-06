@@ -7,18 +7,19 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
+check_root (){
+if [ $USERID -ne 0 ];then
+    echo -e "$R You must required sudo access to execute this $N"
+    exit 1
+fi
+}
+check_root
+
 logfolder="/var/log/mysql.log"
 logfile=$(echo $0 | cut -d "." -f1 )
 Timestamp=$(date +%y-%m-%d-%H-%M-%S)
 logname="$logfolder/$logfile-$Timestamp.log"
 
-check_root (){
-if [ $USERID -ne 0 ];then
-    echo -e " $R You must required sudo access to execute this $N"
-    exit 1
-fi
-}
-check_root
 
 validate () {
     if [ $1 -ne 0 ];then
