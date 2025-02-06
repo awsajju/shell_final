@@ -30,7 +30,7 @@ validate (){
     fi
 }
 
-dnf module disbale nodejs -y &>>$logname
+dnf module disable nodejs -y &>>$logname
 validate $? "disabling current nodejs"
 
 dnf module enable nodejs:20 -y &>>$logname
