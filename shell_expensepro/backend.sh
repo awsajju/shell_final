@@ -72,11 +72,11 @@ mysql -h mysql.proawsdevops.fun -u root -pExpenseApp@1 < /home/ec2-user/shell_fi
 validate $? "setting schema"
 
 
-systemctl daemon-reload &>>$logname
-validate $? "Daemon Reload"
+systemctl daemon-reload
+validate $? "Daemon reload"
 
-systemctl enable backend &>>$logname
-validate $? "Enabling backend"
+systemctl enable backend
+validate $? "enabling backend"
 
-systemctl restart backend &>>$logname
-validate $? "Starting Backend"
+systemctl restart backend
+validate $? "restarting backend"
